@@ -173,13 +173,17 @@ class domogeek extends eqLogic {
     
     public function getInformations() {
     	log::add('domogeek', 'info', 'Récupération des données', 'config');
+        if($this->getConfiguration('url')<>''){
+        	$url=$this->getConfiguration('url');
+        }else{
+        	$url="http://api.domogeek.fr";
+        }
         
-        
-        $holidayall=json_decode(file_get_contents("http://api.domogeek.fr/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
-		$sun=json_decode(file_get_contents("http://api.domogeek.fr/sun/".$this->getConfiguration('ville')."/all/now"),true);
-		$tempo=json_decode(file_get_contents("http://api.domogeek.fr/tempoedf/now/json"),true);
-		$tempo_tomorrow=json_decode(file_get_contents("http://api.domogeek.fr/tempoedf/tomorrow/json"),true);
-		$vigilance=json_decode(file_get_contents("http://api.domogeek.fr/vigilance/".$this->getConfiguration('departement')."/all"),true);
+        $holidayall=json_decode(file_get_contents($url."/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
+		$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now"),true);
+		$tempo=json_decode(file_get_contents($url."/tempoedf/now/json"),true);
+		$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json"),true);
+		$vigilance=json_decode(file_get_contents($url."/vigilance/".$this->getConfiguration('departement')."/all"),true);
 		
        
 		foreach ($this->getCmd() as $cmd) {
@@ -236,53 +240,58 @@ class domogeekCmd extends cmd {
 
     /*     * *********************Methode d'instance************************* */
 	public function execute($_options = array()) {
+		if($this->getConfiguration('url')<>''){
+        	$url=$this->getConfiguration('url');
+        }else{
+        	$url="http://api.domogeek.fr";
+        }
 		if($cmd->getConfiguration('data')=="ferie"){
-			$holidayall=json_decode(file_get_contents("http://api.domogeek.fr/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
+			$holidayall=json_decode(file_get_contents($url."/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
 			if($holidayall['holiday']=="False"){
 				return "Non";
 			}else{
 				return $holidayall['holiday'];
 			}
 		}elseif($cmd->getConfiguration('data')=="weekend"){
-			$holidayall=json_decode(file_get_contents("http://api.domogeek.fr/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
+			$holidayall=json_decode(file_get_contents($url."/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
 			if($holidayall['weekend']=="False"){
 				return "Non";
 			}else{
 				return $holidayall['weekend'];
 			}
 		}elseif($cmd->getConfiguration('data')=="vacances_scolaires"){
-			$holidayall=json_decode(file_get_contents("http://api.domogeek.fr/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);	
+			$holidayall=json_decode(file_get_contents($url."/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);	
 			if($holidayall['schoolholiday']=="False"){
 				return "Non";
 			}else{
 				return $holidayall['schoolholiday'];
 			}
 		}elseif($cmd->getConfiguration('data')=="duree_jour"){
-			$sun=json_decode(file_get_contents("http://api.domogeek.fr/sun/".$this->getConfiguration('ville')."/all/now"),true);
+			$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now"),true);
 			return $sun['dayduration'];
 		}elseif($cmd->getConfiguration('data')=="sunset"){
-			$sun=json_decode(file_get_contents("http://api.domogeek.fr/sun/".$this->getConfiguration('ville')."/all/now"),true);
+			$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now"),true);
 			return $sun['sunset'];
 		}elseif($cmd->getConfiguration('data')=="zenith"){
-			$sun=json_decode(file_get_contents("http://api.domogeek.fr/sun/".$this->getConfiguration('ville')."/all/now"),true);
+			$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now"),true);
 			return $sun['zenith'];
 		}elseif($cmd->getConfiguration('data')=="sunrise"){
-			$sun=json_decode(file_get_contents("http://api.domogeek.fr/sun/".$this->getConfiguration('ville')."/all/now"),true);
+			$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now"),true);
 			return $sun['sunrise'];
 		}elseif($cmd->getConfiguration('data')=="tempo_today"){
-			$tempo=json_decode(file_get_contents("http://api.domogeek.fr/tempoedf/now/json"),true);
+			$tempo=json_decode(file_get_contents($url."/tempoedf/now/json"),true);
 			return $tempo['tempocolor'];
 		}elseif($cmd->getConfiguration('data')=="tempo_tomorrow"){
-			$tempo_tomorrow=json_decode(file_get_contents("http://api.domogeek.fr/tempoedf/tomorrow/json"),true);
+			$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json"),true);
 			return $tempo_tomorrow['tempocolor'];
 		}elseif($cmd->getConfiguration('data')=="vigilance_inondation"){
-			$vigilance=json_decode(file_get_contents("http://api.domogeek.fr/vigilance/".$this->getConfiguration('departement')."/all"),true);	
+			$vigilance=json_decode(file_get_contents($url."/vigilance/".$this->getConfiguration('departement')."/all"),true);	
 			return $vigilance['vigilanceflood'];
 		}elseif($cmd->getConfiguration('data')=="vigilance_meteo"){
-			$vigilance=json_decode(file_get_contents("http://api.domogeek.fr/vigilance/".$this->getConfiguration('departement')."/all"),true);	
+			$vigilance=json_decode(file_get_contents($url."/vigilance/".$this->getConfiguration('departement')."/all"),true);	
 			return $vigilance['vigilancecolor'];
 		}elseif($cmd->getConfiguration('data')=="vigilance_type"){
-			$vigilance=json_decode(file_get_contents("http://api.domogeek.fr/vigilance/".$this->getConfiguration('departement')."/all"),true);	
+			$vigilance=json_decode(file_get_contents($url."/vigilance/".$this->getConfiguration('departement')."/all"),true);	
 			return $vigilance['vigilancerisk'];
 		}
         return false;

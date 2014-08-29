@@ -73,6 +73,13 @@ sendVarToJS('eqType', 'domogeek');
                     	</div>
                     	
                 		</div>
+                		<div class="form-group">
+                    	<label class="col-md-6 control-label">{{Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)}}</label>
+                    	<div class="col-md-6">
+                    		<input type="text" id="url" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="url" placeholder=""/>
+                    	</div>
+                    	
+                		</div>
                     </fieldset> 
                 </form>
             </div>

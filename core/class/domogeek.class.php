@@ -196,6 +196,8 @@ class domogeek extends eqLogic {
 				}elseif($cmd->getConfiguration('data')=="weekend"){
 					if($holidayall['weekend']=="False"){
 						$cmd->event("Non");
+					}elseif($holidayall['weekend']=="True"){
+						$cmd->event("Oui");
 					}else{
 						$cmd->event($holidayall['weekend']);
 					}
@@ -256,6 +258,8 @@ class domogeekCmd extends cmd {
 			$holidayall=json_decode(file_get_contents($url."/holidayall/".$this->getConfiguration('zone_scolaire')."/now"),true);
 			if($holidayall['weekend']=="False"){
 				return "Non";
+			}elseif($holidayall['weekend']=="True"){
+				return "Oui";
 			}else{
 				return $holidayall['weekend'];
 			}

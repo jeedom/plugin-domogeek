@@ -71,8 +71,13 @@ sendVarToJS('eqType', 'domogeek');
                     	<div class="col-md-3">
                     		<input type="text" id="zone_scolaire" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_scolaire" placeholder="Zone scolaire (A,B,C)"/>
                     	</div>
-                    	
-                		</div>
+                    	</div>
+                    	<div class="form-group">
+                    	<label class="col-md-2 control-label">{{Zone EJP EDF (nord|sud|ouest|paca)}}</label>
+                    	<div class="col-md-3">
+                    		<input type="text" id="zone_ejp" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_ejp" placeholder="Zone EJP (nord|sud|ouest|paca)"/>
+                    	</div>
+                    	</div>
                 		<div class="form-group">
                     	<label class="col-md-6 control-label">{{Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)}}</label>
                     	<div class="col-md-6">

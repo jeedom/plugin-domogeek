@@ -144,6 +144,16 @@ class domogeek extends eqLogic {
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('IP Publique', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'ip_publique');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
         $domogeekCmd->setName(__('Jour Tempo EDF', __FILE__));
         $domogeekCmd->setEqLogic_id($this->id);
         $domogeekCmd->setConfiguration('data', 'tempo_today');
@@ -157,6 +167,26 @@ class domogeek extends eqLogic {
         $domogeekCmd->setName(__('Demain Tempo EDF', __FILE__));
         $domogeekCmd->setEqLogic_id($this->id);
         $domogeekCmd->setConfiguration('data', 'tempo_tomorrow');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Jour EJP EDF', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'ejp_today');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Demain EJP EDF', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
         $domogeekCmd->setSubType('other');
@@ -202,11 +232,55 @@ class domogeek extends eqLogic {
             	$domogeek->getInformations();
 			
 		}
+		$found_ejp=0;
+		$found_ip_publique=0;
+		foreach ($this->getCmd() as $cmd) {
+			if($cmd->getConfiguration('data')=="ejp_today"){
+				$found_ejp=1;
+			}elseif($cmd->getConfiguration('data')=="ip_publique"){
+				$found_ip_publique=1;
+			}
+		}
+		if($found_ejp==0){
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('Jour EJP EDF', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'ejp_today');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+			
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('Demain EJP EDF', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+		}
+		if($found_ip_publique==0){
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('IP Publique', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'ip_publique');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+		}
     }
 		
 	public function preUpdate() {
         if (!in_array($this->getConfiguration('zone_scolaire'), array('A','B','C'))) {
             throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
+        }
+		if (!in_array($this->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+            throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
         }
 		if (!is_numeric($this->getConfiguration('departement')) || strlen($this->getConfiguration('departement'))<>2) {
             throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
@@ -234,6 +308,13 @@ class domogeek extends eqLogic {
         }else{
         	$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
         }
+		if (!in_array($this->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+            throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
+        }else{
+        	$ejp=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+        }
+		$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$tempo=json_decode(file_get_contents($url."/tempoedf/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		if (!is_numeric($this->getConfiguration('departement')) || strlen($this->getConfiguration('departement'))<>2) {
@@ -277,6 +358,24 @@ class domogeek extends eqLogic {
 					$cmd->event(str_replace(':', '', $sun['zenith']));
 				}elseif($cmd->getConfiguration('data')=="sunrise_raw"){
 					$cmd->event(str_replace(':', '', $sun['sunrise']));
+				}elseif($cmd->getConfiguration('data')=="ejp_today"){
+					if($ejp['ejp']=="False"){
+						$cmd->event("Non");
+					}elseif($ejp['ejp']=="True"){
+						$cmd->event("Oui");
+					}else{
+						$cmd->event($ejp['ejp']);
+					}
+				}elseif($cmd->getConfiguration('data')=="ejp_tomorrow"){
+					if($ejp_tomorrow['ejp']=="False"){
+						$cmd->event("Non");
+					}elseif($ejp_tomorrow['ejp']=="True"){
+						$cmd->event("Oui");
+					}else{
+						$cmd->event($ejp_tomorrow['ejp']);
+					}					
+				}elseif($cmd->getConfiguration('data')=="ip_publique"){
+					$cmd->event($ip_publique['myip']);
 				}elseif($cmd->getConfiguration('data')=="tempo_today"){
 					$cmd->event($tempo['tempocolor']);
 				}elseif($cmd->getConfiguration('data')=="tempo_tomorrow"){
@@ -394,6 +493,35 @@ class domogeekCmd extends cmd {
 				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			}
 			return str_replace(':', '',$sun['sunrise']);
+		}elseif($this->getConfiguration('data')=="ip_publique"){
+			$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			return $ip_publique['myip'];
+		}elseif($this->getConfiguration('data')=="ejp_today"){
+			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+            	throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
+        	}else{
+				$ejp_today=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			}
+			if($ejp_today['ejp']=="False"){
+				return "Non";
+			}elseif($ejp_today['ejp']=="True"){
+				return "Oui";
+			}else{
+				return $ejp_today['ejp'];
+			}
+		}elseif($this->getConfiguration('data')=="ejp_tomorrow"){
+			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+            	throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
+        	}else{
+				$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			}
+			if($ejp_tomorrow['ejp']=="False"){
+				return "Non";
+			}elseif($ejp_tomorrow['ejp']=="True"){
+				return "Oui";
+			}else{
+				return $ejp_tomorrow['ejp'];
+			}
 		}elseif($this->getConfiguration('data')=="tempo_today"){
 			$tempo=json_decode(file_get_contents($url."/tempoedf/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			return $tempo['tempocolor'];

@@ -279,9 +279,9 @@ class domogeek extends eqLogic {
         if (!in_array($this->getConfiguration('zone_scolaire'), array('A','B','C'))) {
             throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
         }
-		if (!in_array($this->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+		/*if (!in_array($this->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
             throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
-        }
+        }*/
 		if (!is_numeric($this->getConfiguration('departement')) || strlen($this->getConfiguration('departement'))<>2) {
             throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
         }
@@ -309,7 +309,10 @@ class domogeek extends eqLogic {
         	$sun=json_decode(file_get_contents($url."/sun/".$this->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
         }
 		if (!in_array($this->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
-            throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
+            $ejp=array();
+            $ejp['ejp']="NON CONFIGURE";
+            $ejp_tomorrow=array();
+            $ejp_tomorrow['ejp']="NON CONFIGURE";
         }else{
         	$ejp=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
@@ -498,8 +501,9 @@ class domogeekCmd extends cmd {
 			return $ip_publique['myip'];
 		}elseif($this->getConfiguration('data')=="ejp_today"){
 			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
-            	throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
-        	}else{
+            	$ejp_today=array();
+            	$ejp_today['ejp']="NON CONFIGURE";
+            }else{
 				$ejp_today=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			}
 			if($ejp_today['ejp']=="False"){
@@ -511,7 +515,8 @@ class domogeekCmd extends cmd {
 			}
 		}elseif($this->getConfiguration('data')=="ejp_tomorrow"){
 			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
-            	throw new Exception(__('La zone EJP doit être nord, sud, ouest ou paca', __FILE__));
+            	$ejp_tomorrow=array();
+            	$ejp_tomorrow['ejp']="NON CONFIGURE";
         	}else{
 				$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			}

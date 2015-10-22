@@ -194,6 +194,36 @@ class domogeek extends eqLogic {
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Saison', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'season');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Saint du jour', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'feastedsaint');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Saint de demain', __FILE__));
+        $domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
+		$domogeekCmd->setUnite('');
+        $domogeekCmd->setType('info');
+        $domogeekCmd->setSubType('other');
+		$domogeekCmd->setIsHistorized(0);
+        $domogeekCmd->save();
+		
+		$domogeekCmd = new domogeekCmd();
         $domogeekCmd->setName(__('Vigilance inondation', __FILE__));
         $domogeekCmd->setEqLogic_id($this->id);
         $domogeekCmd->setConfiguration('data', 'vigilance_inondation');
@@ -234,11 +264,17 @@ class domogeek extends eqLogic {
 		}
 		$found_ejp=0;
 		$found_ip_publique=0;
+		$found_saison=0;
+		$found_saint=0;
 		foreach ($this->getCmd() as $cmd) {
 			if($cmd->getConfiguration('data')=="ejp_today"){
 				$found_ejp=1;
 			}elseif($cmd->getConfiguration('data')=="ip_publique"){
 				$found_ip_publique=1;
+			}elseif($cmd->getConfiguration('data')=="season"){
+				$found_saison=1;
+			}elseif($cmd->getConfiguration('data')=="feastedsaint"){
+				$found_saint=1;
 			}
 		}
 		if($found_ejp==0){
@@ -267,6 +303,38 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setName(__('IP Publique', __FILE__));
 	        $domogeekCmd->setEqLogic_id($this->id);
 	        $domogeekCmd->setConfiguration('data', 'ip_publique');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+		}
+		if($found_saison==0){
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('Saison', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'season');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+		}
+		if($found_saint==0){
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('Saint du jour', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'feastedsaint');
+			$domogeekCmd->setUnite('');
+	        $domogeekCmd->setType('info');
+	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setIsHistorized(0);
+	        $domogeekCmd->save();
+			
+			$domogeekCmd = new domogeekCmd();
+	        $domogeekCmd->setName(__('Saint de demain', __FILE__));
+	        $domogeekCmd->setEqLogic_id($this->id);
+	        $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 	        $domogeekCmd->setSubType('other');
@@ -317,6 +385,9 @@ class domogeek extends eqLogic {
         	$ejp=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
         }
+		$season=json_decode(file_get_contents($url."/season/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+		$feastedsaint=json_decode(file_get_contents($url."/feastedsaint/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+		$feastedsaint_tomorrow=json_decode(file_get_contents($url."/feastedsaint/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$tempo=json_decode(file_get_contents($url."/tempoedf/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
@@ -377,8 +448,24 @@ class domogeek extends eqLogic {
 					}else{
 						$cmd->event($ejp_tomorrow['ejp']);
 					}					
+				}elseif($cmd->getConfiguration('data')=="season"){
+					if($season['season']=="winter"){
+						$cmd->event("hiver");
+					}elseif($season['season']=="spring"){
+						$cmd->event("printemps");
+					}elseif($season['season']=="summer"){
+						$cmd->event("été");
+					}elseif($season['season']=="fall"){
+						$cmd->event("automne");
+					}else{
+						$cmd->event($season['season']);
+					}					
 				}elseif($cmd->getConfiguration('data')=="ip_publique"){
 					$cmd->event($ip_publique['myip']);
+				}elseif($cmd->getConfiguration('data')=="feastedsaint"){
+					$cmd->event($feastedsaint['feastedsaint']);
+				}elseif($cmd->getConfiguration('data')=="feastedsaint_tomorrow"){
+					$cmd->event($feastedsaint_tomorrow['feastedsaint']);
 				}elseif($cmd->getConfiguration('data')=="tempo_today"){
 					$cmd->event($tempo['tempocolor']);
 				}elseif($cmd->getConfiguration('data')=="tempo_tomorrow"){
@@ -499,6 +586,25 @@ class domogeekCmd extends cmd {
 		}elseif($this->getConfiguration('data')=="ip_publique"){
 			$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 			return $ip_publique['myip'];
+		}elseif($this->getConfiguration('data')=="season"){
+			$season=json_decode(file_get_contents($url."/season/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			if($season['season']=="winter"){
+				return "hiver";
+			}elseif($season['season']=="spring"){
+				return "printemps";
+			}elseif($season['season']=="summer"){
+				return "été";
+			}elseif($season['season']=="fall"){
+				return "automne";
+			}else{
+				return $season['season'];
+			}
+		}elseif($this->getConfiguration('data')=="feastedsaint"){
+			$feastedsaint=json_decode(file_get_contents($url."/feastedsaint/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			return $feastedsaint['feastedsaint'];
+		}elseif($this->getConfiguration('data')=="feastedsaint_tomorrow"){
+			$feastedsaint_tomorrow=json_decode(file_get_contents($url."/feastedsaint/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			return $feastedsaint_tomorrow['feastedsaint'];
 		}elseif($this->getConfiguration('data')=="ejp_today"){
 			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
             	$ejp_today=array();

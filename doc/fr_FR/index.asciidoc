@@ -1,0 +1,18 @@
+== DomoGeek
+
+=== Description
+Plugin pour récuperer les informations du site DomoGeek.
+
+image:../images/domogeek_screenshot1.png[]
+
+'''
+=== Configuration
+include::configuration.asciidoc[]
+
+'''
+=== FAQ
+include::faq.asciidoc[]
+
+'''
+=== Changelog
+include::changelog.asciidoc[]

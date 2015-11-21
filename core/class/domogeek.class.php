@@ -28,7 +28,6 @@ class domogeek extends eqLogic {
 
     public static function pull($_options) {
         foreach (eqLogic::byType('domogeek') as $domogeek) {
-				
 			$domogeek->getInformations();
 			
 		}
@@ -46,6 +45,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ferie');
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -56,6 +56,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'weekend');
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -66,6 +67,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vacances_scolaires');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -76,6 +78,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'duree_jour');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(1);
         $domogeekCmd->save();        
@@ -86,6 +89,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunrise');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -96,6 +100,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'zenith');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -106,6 +111,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunset');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -116,6 +122,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunrise_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -127,6 +134,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'zenith_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -138,6 +146,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunset_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -149,6 +158,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ip_publique');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -159,6 +169,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'tempo_today');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -169,6 +180,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'tempo_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -179,6 +191,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ejp_today');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -189,6 +202,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -199,6 +213,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'season');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -209,6 +224,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'feastedsaint');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -219,6 +235,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -229,6 +246,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_inondation');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -239,6 +257,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_meteo');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -249,6 +268,7 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_type');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
+		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('other');
 		$domogeekCmd->setIsHistorized(0);
         $domogeekCmd->save();
@@ -267,6 +287,8 @@ class domogeek extends eqLogic {
 		$found_saison=0;
 		$found_saint=0;
 		foreach ($this->getCmd() as $cmd) {
+			$cmd->setEventOnly(1);
+			$cmd->save();
 			if($cmd->getConfiguration('data')=="ejp_today"){
 				$found_ejp=1;
 			}elseif($cmd->getConfiguration('data')=="ip_publique"){
@@ -284,6 +306,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ejp_today');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -294,6 +317,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -305,6 +329,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ip_publique');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -316,6 +341,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'season');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -327,6 +353,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'feastedsaint');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -337,6 +364,7 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
+			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('other');
 			$domogeekCmd->setIsHistorized(0);
 	        $domogeekCmd->save();
@@ -363,7 +391,7 @@ class domogeek extends eqLogic {
         if($this->getConfiguration('url')<>''){
         	$url=$this->getConfiguration('url');
         }else{
-        	$url="http://api.domogeek.fr";
+        	$url="http://domogeek.entropialux.com";
         }
         
         if (!in_array($this->getConfiguration('zone_scolaire'), array('A','B','C'))) {
@@ -382,8 +410,8 @@ class domogeek extends eqLogic {
             $ejp_tomorrow=array();
             $ejp_tomorrow['ejp']="NON CONFIGURE";
         }else{
-        	$ejp=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+        	$ejp=json_decode(@file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+			$ejp_tomorrow=json_decode(@file_get_contents($url."/ejpedf/".$this->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
         }
 		$season=json_decode(file_get_contents($url."/season/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
 		$feastedsaint=json_decode(file_get_contents($url."/feastedsaint/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
@@ -497,7 +525,7 @@ class domogeekCmd extends cmd {
 		if($domogeek->getConfiguration('url')<>''){
         	$url=$domogeek->getConfiguration('url');
         }else{
-        	$url="http://api.domogeek.fr";
+        	$url="http://domogeek.entropialux.com";
         }
 		if($this->getConfiguration('data')=="ferie"){
 			if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {

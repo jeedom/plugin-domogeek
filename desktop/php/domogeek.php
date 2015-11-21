@@ -13,7 +13,8 @@ sendVarToJS('eqType', 'domogeek');
                 <li class="filter" style="margin-bottom: 5px;"><input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/></li>
                 <?php
                 foreach ($eqLogics as $eqLogic) {
-                    echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '"><a>' . $eqLogic->getHumanName(true,true) . '</a></li>';
+					$opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
+                    echo '<li class="cursor li_eqLogic" data-eqLogic_id="' . $eqLogic->getId() . '" style="' . $opacity . '"><a>' . $eqLogic->getHumanName(true) . '</a></li>';
                 }
                 ?>
             </ul>
@@ -31,7 +32,8 @@ sendVarToJS('eqType', 'domogeek');
 	    </div>
 	    <?php
 	foreach ($eqLogics as $eqLogic) {
-		echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
+		$opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
+		echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;' . $opacity . '" >';
 		echo "<center>";
 		echo '<img src="plugins/domogeek/doc/images/domogeek_icon.png" height="105" width="95" />';
 		echo "</center>";
@@ -66,15 +68,12 @@ sendVarToJS('eqType', 'domogeek');
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-2 control-label">{{Activer}}</label>
-                            <div class="col-lg-1">
-                                <input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>
-                            </div>
-                            <label class="col-lg-2 control-label">{{Visible}}</label>
-                            <div class="col-lg-1">
-                                <input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>
-                            </div>
-                        </div>
+						<label class="col-md-2 control-label"></label>
+						<div class="col-md-3">
+							<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Activer}}" data-l1key="isEnable" checked/>
+							<input type="checkbox" class="eqLogicAttr bootstrapSwitch" data-label-text="{{Visible}}" data-l1key="isVisible" checked/>
+						</div>
+						</div>
                         <div class="form-group">
                     	<label class="col-md-2 control-label">{{Département}}</label>
                     	<div class="col-md-3">
@@ -109,8 +108,7 @@ sendVarToJS('eqType', 'domogeek');
                     </fieldset> 
                 </form>
 
-
-        <legend>Informations</legend>
+		<legend><i class="fa fa-list-alt"></i>  {{Informations}}</legend>
         <table id="table_cmd" class="table table-bordered table-condensed">
             <thead>
                 <tr>

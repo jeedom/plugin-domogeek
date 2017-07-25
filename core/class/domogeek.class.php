@@ -26,7 +26,7 @@ class domogeek extends eqLogic {
     /*     * ***********************Methode static*************************** */
     
 
-    public static function pull($_options) {
+    public static function pull() {
         foreach (eqLogic::byType('domogeek') as $domogeek) {
 			$domogeek->getInformations();
 			

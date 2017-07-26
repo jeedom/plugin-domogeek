@@ -1,0 +1,5 @@
+. Serveur Nut :
+
+Afin d'utiliser le plugin Nut, vous devez disposer d'un serveur Nut fonctionnel.
+De nombreux tutoriaux sont disponibles sur internet.
+Pour les systèmes Ubuntu / Debian : http://doc.ubuntu-fr.org/nut

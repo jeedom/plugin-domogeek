@@ -1,0 +1,5 @@
+[panel,primary]
+.Quelle est la fréquence de rafraîchissement
+--
+Le système récupère les informations toutes les 2 heures.
+--

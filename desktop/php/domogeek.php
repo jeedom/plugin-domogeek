@@ -46,96 +46,89 @@ sendVarToJS('eqType', 'domogeek');
                     <fieldset>
                          <legend><i class="fa fa-arrow-circle-left eqLogicAction cursor" data-action="returnToThumbnailDisplay"></i> {{Général}}<i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i></legend>
                 			<div class="form-group">
-                            <label class="col-md-2 control-label">{{Nom du bloc}}</label>
-                            <div class="col-md-3">
-                                <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
-                                <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement}}"/>
+                            	<label class="col-md-2 control-label">{{Nom du bloc}}</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
+                                    <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement}}"/>
+                                </div>
+                        	</div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Objet parent}}</label>
+                                <div class="col-md-3">
+                                    <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
+                                        <option value="">{{Aucun}}</option>
+                                        <?php
+                                        foreach (object::all() as $object) {
+                                            echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label">{{Objet parent}}</label>
-                            <div class="col-md-3">
-                                <select id="sel_object" class="eqLogicAttr form-control" data-l1key="object_id">
-                                    <option value="">{{Aucun}}</option>
-                                    <?php
-                                    foreach (object::all() as $object) {
-                                        echo '<option value="' . $object->getId() . '">' . $object->getName() . '</option>';
-                                    }
-                                    ?>
-                                </select>
+                            <div class="form-group">
+                            <label class="col-md-2 control-label"></label>
+                                <div class="col-md-3">
+                                    <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
+                                    <label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-						<label class="col-md-2 control-label"></label>
-						<div class="col-md-3">
-							<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isEnable" checked/>{{Activer}}</label>
-		 					<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
-              </div>
-          </div>
-      </fieldset>
-
-						</div>
-						</div>
-                        <div class="form-group">
-                    	<label class="col-md-2 control-label">{{Département}}</label>
-                    	<div class="col-md-3">
-                        	<input type="text" id="departement" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="departement" placeholder="Département"/>
-                   		</div>
-                		</div>
-                		<div class="form-group">
-                    	<label class="col-md-2 control-label">{{Ville}}</label>
-                    	<div class="col-md-3">
-                        	<input type="text" id="ville" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="ville" placeholder="Ville (sans accent)"/>
-                    	</div>
-                		</div>
-                		<div class="form-group">
-                    	<label class="col-md-2 control-label">{{Zone scolaire}}</label>
-                    	<div class="col-md-3">
-                    		<input type="text" id="zone_scolaire" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_scolaire" placeholder="Zone scolaire (A,B,C)"/>
-                    	</div>
-                    	</div>
-                    	<div class="form-group">
-                    	<label class="col-md-2 control-label">{{Zone EJP EDF (nord|sud|ouest|paca)}}</label>
-                    	<div class="col-md-3">
-                    		<input type="text" id="zone_ejp" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_ejp" placeholder="Zone EJP (nord|sud|ouest|paca)"/>
-                    	</div>
-                    	</div>
-                		<div class="form-group">
-                    	<label class="col-md-2 control-label">{{Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)}}</label>
-                    	<div class="col-md-6">
-                    		<input type="text" id="url" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="url" placeholder=""/>
-                    	</div>
-                    	
-                		</div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Département}}</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="departement" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="departement" placeholder="Département"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Ville}}</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="ville" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="ville" placeholder="Ville (sans accent)"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Zone scolaire}}</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="zone_scolaire" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_scolaire" placeholder="Zone scolaire (A,B,C)"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Zone EJP EDF (nord|sud|ouest|paca)}}</label>
+                                <div class="col-md-3">
+                                    <input type="text" id="zone_ejp" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="zone_ejp" placeholder="Zone EJP (nord|sud|ouest|paca)"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">{{Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)}}</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="url" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="url" placeholder=""/>
+                                </div>
+                            </div>
                     </fieldset> 
                 </form>
+                <legend><i class="fa fa-list-alt"></i>  {{Informations}}</legend>
+                <table id="table_cmd" class="table table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">{{ID}}</th>
+                            <th style="width: 400px;">{{Nom}}</th>
+                            <th style="width: 100px;">{{Paramètres}}</th>
+                            <th style="width: 100px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-		<legend><i class="fa fa-list-alt"></i>  {{Informations}}</legend>
-        <table id="table_cmd" class="table table-bordered table-condensed">
-            <thead>
-                <tr>
-                    <th style="width: 50px;">{{ID}}</th>
-                    <th style="width: 400px;">{{Nom}}</th>
-                    <th style="width: 100px;">{{Paramètres}}</th>
-                    <th style="width: 100px;"></th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="form-actions">
-                    <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
-                    <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
-                </div>
-            </fieldset>
-        </form>
-
-
-</div>
+                    </tbody>
+                </table>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-actions">
+                            <a class="btn btn-danger eqLogicAction" data-action="remove"><i class="fa fa-minus-circle"></i> {{Supprimer}}</a>
+                            <a class="btn btn-success eqLogicAction" data-action="save"><i class="fa fa-check-circle"></i> {{Sauvegarder}}</a>
+                        </div>
+                    </fieldset>
+                </form>
+			</div>
+		</div>
+	</div>
 
 <?php include_file('desktop', 'domogeek', 'js', 'domogeek'); ?>
 <?php include_file('core', 'plugin.template', 'js'); ?>

@@ -1,0 +1,14 @@
+{
+    "id" : "domogeek",
+    "name" : "DomoGeek",
+    "description" : "Plugin pour récuperer les informations du site DomoGeek",
+    "icon" : "fa fa-info-circle",
+    "licence" : "AGPL",
+    "author" : "Jeedom",
+    "require" : "2.3",
+    "installation" : "Aucune",
+    "hasDependency" : 0,
+    "hasOwnDeamon" : 0,
+    "category" : "organization",
+    "version" : "1"
+}

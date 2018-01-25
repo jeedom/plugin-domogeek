@@ -1,6 +1,6 @@
 == DomoGeek
 
-=== Description
+=== Descripción
 Plugin pour récuperer les informations du site DomoGeek.
 
 image:../images/domogeek_screenshot1.png[]

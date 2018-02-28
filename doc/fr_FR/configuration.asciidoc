@@ -1,3 +1,0 @@
-La configuration se fait dans le plugin Domogeek.
-
-image::../images/domogeek1.png[]

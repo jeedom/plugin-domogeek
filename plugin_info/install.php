@@ -27,9 +27,14 @@ function domogeek_install() {
         $cron->setFunction('pull');
         $cron->setEnable(1);
         $cron->setDeamon(0);
-        $cron->setSchedule('0 */2 * * *');
-        $cron->save();
     }
+    $hours = '';
+    for($i = rand(0,4);$i<24;$i += 4){
+        $hours .= $i.',';
+    }
+    $hours = trim($hours,',');
+    $cron->setSchedule(rand(0,59).' '.$hours.' * * *');
+    $cron->save();
 }
 
 function domogeek_update() {
@@ -40,9 +45,14 @@ function domogeek_update() {
         $cron->setFunction('pull');
         $cron->setEnable(1);
         $cron->setDeamon(0);
-        $cron->setSchedule('0 */2 * * *');
-        $cron->save();
     }
+    $hours = '';
+    for($i = rand(0,4);$i<24;$i += 4){
+        $hours .= $i.',';
+    }
+    $hours = trim($hours,',');
+    $cron->setSchedule(rand(0,59).' '.$hours.' * * *');
+    $cron->save();
     $cron->stop();
 }
 

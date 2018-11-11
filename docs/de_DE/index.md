@@ -1,7 +1,7 @@
 DomoGeek 
 ========
 
-Description 
+Beschreibung 
 -----------
 
 Plugin pour récuperer les informations du site DomoGeek.

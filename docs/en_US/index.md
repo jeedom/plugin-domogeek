@@ -1,14 +1,14 @@
 DomoGeek 
 ========
 
-Description 
+Description
 -----------
 
 Plugin pour récuperer les informations du site DomoGeek.
 
 ![domogeek screenshot1](../images/domogeek_screenshot1.png)
 
-Configuration 
+Configuration
 -------------
 
 La configuration se fait dans le plugin Domogeek.
@@ -20,7 +20,7 @@ FAQ
 
 Le système récupère les informations toutes les 2 heures.
 
-Changelog 
+Changelog
 ---------
 
 -   V1.2 : Ajout Saison, saint du jour et saint du lendemain

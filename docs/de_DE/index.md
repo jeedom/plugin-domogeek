@@ -1,7 +1,7 @@
 DomoGeek 
 ========
 
-Description 
+Beschreibung 
 -----------
 
 Plugin pour récuperer les informations du site DomoGeek.
@@ -20,7 +20,7 @@ FAQ
 
 Le système récupère les informations toutes les 2 heures.
 
-Changelog 
+Änderungsprotokoll
 ---------
 
 -   V1.2 : Ajout Saison, saint du jour et saint du lendemain

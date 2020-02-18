@@ -1,0 +1,63 @@
+{
+    "desktop\/js\/domogeek.js": {
+        "Afficher": "Afficher",
+        "Tester": "Tester"
+    },
+    "desktop\/php\/domogeek.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Ajouter un bloc d'info": "Ajouter un bloc d'info",
+        "Rechercher": "Rechercher",
+        "Gestion": "Gestion",
+        "Ajouter": "Ajouter",
+        "Mes équipements": "Mes équipements",
+        "Général": "Général",
+        "Nom du bloc": "Nom du bloc",
+        "Nom de l'équipement": "Nom de l'équipement",
+        "Objet parent": "Objet parent",
+        "Aucun": "Aucun",
+        "Activer": "Activer",
+        "Visible": "Visible",
+        "Département": "Département",
+        "Ville": "Ville",
+        "Zone scolaire": "Zone scolaire",
+        "Zone EJP EDF (nord|sud|ouest|paca)": "Zone EJP EDF (nord|sud|ouest|paca)",
+        "Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)": "Adresse serveur DomoGeek <br>(optionel: uniquement pour une installation locale)",
+        "Informations": "Informations",
+        "ID": "ID",
+        "Nom": "Nom",
+        "Paramètres": "Paramètres",
+        "Supprimer": "Supprimer",
+        "Sauvegarder": "Sauvegarder"
+    },
+    "core\/ajax\/domogeek.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accès non autorisé",
+        "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
+    },
+    "core\/class\/domogeek.class.php": {
+        "Férié": "Holiday",
+        "Week-End": "Weekend",
+        "Vacances scolaires": "School vacation",
+        "Durée jour": "Duration day",
+        "Lever du soleil": "Sunrise",
+        "Zenith": "cenit",
+        "Coucher du soleil": "Sunset",
+        "Lever du soleil scénario": "Sunrise scenario",
+        "Zenith scénario": "Zenith scenario",
+        "Coucher du soleil scénario": "Sunset scenario",
+        "IP Publique": "Public IP",
+        "Jour Tempo EDF": "EDF Tempo Day",
+        "Demain Tempo EDF": "Tomorrow Tempo EDF",
+        "Jour EJP EDF": "EDF EDF day",
+        "Demain EJP EDF": "Tomorrow EJP EDF",
+        "Saison": "Season",
+        "Saint du jour": "Saint of the day",
+        "Saint de demain": "Saint of tomorrow",
+        "Vigilance inondation": "Flood vigilance",
+        "Vigilance météo": "Weather alert",
+        "Type de vigilance": "Type of vigilance",
+        "La zone scolaire doit être A": "The school zone must be A",
+        "La zone EJP doit être nord": "The EJP zone must be north",
+        "Le département doit être 2 chiffres": "Department must be 2 digits",
+        "La ville ne peut-être vide": "The city may not be empty"
+    }
+}

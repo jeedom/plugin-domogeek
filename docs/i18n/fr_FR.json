@@ -1,0 +1,22 @@
+{
+    "changelog.md": {
+        "31\/05\/2018": "31\/05\/2018",
+        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes"
+    },
+    "index.md": {
+        "DomoGeek": "DomoGeek",
+        "Description": "Description",
+        "Plugin pour récuperer les informations du site DomoGeek": "Plugin pour récuperer les informations du site DomoGeek",
+        "Configuration": "Configuration",
+        "La configuration se fait dans le plugin Domogeek": "La configuration se fait dans le plugin Domogeek",
+        "FAQ": "FAQ",
+        "Le système récupère les informations toutes les 2 heures": "Le système récupère les informations toutes les 2 heures",
+        "Changelog": "Changelog",
+        "V1.2": "V1.2",
+        "Ajout Saison, saint du jour et saint du lendemain": "Ajout Saison, saint du jour et saint du lendemain",
+        "V1.1": "V1.1",
+        "Ajout EJT et Adresse IP": "Ajout EJT et Adresse IP",
+        "V1": "V1",
+        "Première release": "Première release"
+    }
+}

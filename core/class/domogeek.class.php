@@ -38,7 +38,15 @@ class domogeek extends eqLogic {
     /*     * *********************Methode d'instance************************* */
     
      public function postInsert() {
-    	
+		
+		$domogeekCmd = new domogeekCmd();
+        $domogeekCmd->setName(__('Rafraichir', __FILE__));
+		$domogeekCmd->setEqLogic_id($this->id);
+        $domogeekCmd->setType('action');
+		$domogeekCmd->setSubType('other');
+		$domogeekCmd->setLogicalId('refresh');
+        $domogeekCmd->save();
+
         $domogeekCmd = new domogeekCmd();
         $domogeekCmd->setName(__('Férié', __FILE__));
         $domogeekCmd->setEqLogic_id($this->id);
@@ -46,8 +54,9 @@ class domogeek extends eqLogic {
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('ferie');
         $domogeekCmd->save();
 
         $domogeekCmd = new domogeekCmd();
@@ -57,8 +66,9 @@ class domogeek extends eqLogic {
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('weekend');
         $domogeekCmd->save();
         
         $domogeekCmd = new domogeekCmd();
@@ -68,8 +78,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('vacances_scolaires');
         $domogeekCmd->save();
 
         $domogeekCmd = new domogeekCmd();
@@ -79,8 +90,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(1);
+		$domogeekCmd->setLogicalId('duree_jour');
         $domogeekCmd->save();        
 
         $domogeekCmd = new domogeekCmd();
@@ -90,8 +102,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('sunrise');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -101,8 +114,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('zenith');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -112,8 +126,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('sunset');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -123,9 +138,10 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
+		$domogeekCmd->setLogicalId('sunrise_raw');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -135,9 +151,10 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
+		$domogeekCmd->setLogicalId('zenith_raw');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -147,9 +164,10 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
+		$domogeekCmd->setLogicalId('sunset_raw');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -159,8 +177,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('ip_publique');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -170,8 +189,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('tempo_today');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -181,8 +201,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('tempo_tomorrow');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -192,8 +213,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('ejp_today');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -203,8 +225,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('ejp_tomorrow');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -214,8 +237,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('season');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -225,8 +249,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('feastedsaint');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -236,8 +261,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('feastedsaint_tomorrow');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -247,8 +273,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('vigilance_inondation');
         $domogeekCmd->save();
 		
 		$domogeekCmd = new domogeekCmd();
@@ -258,8 +285,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('vigilance_meteo');
         $domogeekCmd->save();
         
 		$domogeekCmd = new domogeekCmd();
@@ -269,8 +297,9 @@ class domogeek extends eqLogic {
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
 		$domogeekCmd->setEventOnly(1);
-        $domogeekCmd->setSubType('other');
+        $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
+		$domogeekCmd->setLogicalId('vigilance_type');
         $domogeekCmd->save();
 
     }
@@ -307,8 +336,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+			$domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('ejp_today');
 	        $domogeekCmd->save();
 			
 			$domogeekCmd = new domogeekCmd();
@@ -318,8 +348,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('ejp_tomorrow');
 	        $domogeekCmd->save();
 		}
 		if($found_ip_publique==0){
@@ -330,8 +361,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('ip_publique');
 	        $domogeekCmd->save();
 		}
 		if($found_saison==0){
@@ -342,8 +374,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('season');
 	        $domogeekCmd->save();
 		}
 		if($found_saint==0){
@@ -354,8 +387,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('feastedsaint');
 	        $domogeekCmd->save();
 			
 			$domogeekCmd = new domogeekCmd();
@@ -365,8 +399,9 @@ class domogeek extends eqLogic {
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
 			$domogeekCmd->setEventOnly(1);
-	        $domogeekCmd->setSubType('other');
+	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
+			$domogeekCmd->setLogicalId('feastedsaint_tomorrow');
 	        $domogeekCmd->save();
 		}
     }
@@ -526,168 +561,195 @@ class domogeekCmd extends cmd {
         	$url=$domogeek->getConfiguration('url');
         }else{
         	$url="http://domogeek.entropialux.com";
-        }
-		if($this->getConfiguration('data')=="ferie"){
-			if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
-            	throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
-        	}else{
-				$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			if($holidayall['holiday']=="False"){
-				return "Non";
-			}else{
-				return $holidayall['holiday'];
-			}
-		}elseif($this->getConfiguration('data')=="weekend"){
-			if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
-            	throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
-        	}else{
-				$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			if($holidayall['weekend']=="False"){
-				return "Non";
-			}elseif($holidayall['weekend']=="True"){
-				return "Oui";
-			}else{
-				return $holidayall['weekend'];
-			}
-		}elseif($this->getConfiguration('data')=="vacances_scolaires"){
-			if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
-            	throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
-        	}else{
-				$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
-			}
-			if($holidayall['schoolholiday']=="False"){
-				return "Non";
-			}else{
-				return $holidayall['schoolholiday'];
-			}
-		}elseif($this->getConfiguration('data')=="duree_jour"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return $sun['dayduration'];
-		}elseif($this->getConfiguration('data')=="sunset"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return $sun['sunset'];
-		}elseif($this->getConfiguration('data')=="zenith"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return $sun['zenith'];
-		}elseif($this->getConfiguration('data')=="sunrise"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return $sun['sunrise'];
-		}elseif($this->getConfiguration('data')=="sunset_raw"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return str_replace(':', '',$sun['sunset']);
-		}elseif($this->getConfiguration('data')=="zenith_raw"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return str_replace(':', '',$sun['zenith']);
-		}elseif($this->getConfiguration('data')=="sunrise_raw"){
-			if ($domogeek->getConfiguration('ville')=="") {
-            	throw new Exception(__('La ville ne peut-être vide', __FILE__));
-        	}else{
-				$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			return str_replace(':', '',$sun['sunrise']);
-		}elseif($this->getConfiguration('data')=="ip_publique"){
-			$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			return $ip_publique['myip'];
-		}elseif($this->getConfiguration('data')=="season"){
-			$season=json_decode(file_get_contents($url."/season/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			if($season['season']=="winter"){
-				return "hiver";
-			}elseif($season['season']=="spring"){
-				return "printemps";
-			}elseif($season['season']=="summer"){
-				return "été";
-			}elseif($season['season']=="fall"){
-				return "automne";
-			}else{
-				return $season['season'];
-			}
-		}elseif($this->getConfiguration('data')=="feastedsaint"){
-			$feastedsaint=json_decode(file_get_contents($url."/feastedsaint/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			return $feastedsaint['feastedsaint'];
-		}elseif($this->getConfiguration('data')=="feastedsaint_tomorrow"){
-			$feastedsaint_tomorrow=json_decode(file_get_contents($url."/feastedsaint/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			return $feastedsaint_tomorrow['feastedsaint'];
-		}elseif($this->getConfiguration('data')=="ejp_today"){
-			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
-            	$ejp_today=array();
-            	$ejp_today['ejp']="NON CONFIGURE";
-            }else{
-				$ejp_today=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			if($ejp_today['ejp']=="False"){
-				return "Non";
-			}elseif($ejp_today['ejp']=="True"){
-				return "Oui";
-			}else{
-				return $ejp_today['ejp'];
-			}
-		}elseif($this->getConfiguration('data')=="ejp_tomorrow"){
-			if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
-            	$ejp_tomorrow=array();
-            	$ejp_tomorrow['ejp']="NON CONFIGURE";
-        	}else{
-				$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			}
-			if($ejp_tomorrow['ejp']=="False"){
-				return "Non";
-			}elseif($ejp_tomorrow['ejp']=="True"){
-				return "Oui";
-			}else{
-				return $ejp_tomorrow['ejp'];
-			}
-		}elseif($this->getConfiguration('data')=="tempo_today"){
-			$tempo=json_decode(file_get_contents($url."/tempoedf/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			return $tempo['tempocolor'];
-		}elseif($this->getConfiguration('data')=="tempo_tomorrow"){
-			$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
-			return $tempo_tomorrow['tempocolor'];
-		}elseif($this->getConfiguration('data')=="vigilance_inondation"){
-			if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
-            	throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
-       		}else{
-				$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
-			}
-			return $vigilance['vigilanceflood'];
-		}elseif($this->getConfiguration('data')=="vigilance_meteo"){
-			if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
-            	throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
-       		}else{
-				$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
-			}
-			return $vigilance['vigilancecolor'];
-		}elseif($this->getConfiguration('data')=="vigilance_type"){
-			if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
-            	throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
-       		}else{
-				$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
-			}
-			return $vigilance['vigilancerisk'];
+		}
+		switch ($this->getLogicalId()) {
+			case 'refresh':
+				$domogeek->getInformations();
+				break;
+			case 'ferie':
+				if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
+					throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
+				}else{
+					$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				if($holidayall['holiday']=="False"){
+					return "Non";
+				}else{
+					return $holidayall['holiday'];
+				}
+				break;
+			case 'weekend':
+				if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
+					throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
+				}else{
+					$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				if($holidayall['weekend']=="False"){
+					return "Non";
+				}elseif($holidayall['weekend']=="True"){
+					return "Oui";
+				}else{
+					return $holidayall['weekend'];
+				}
+				break;
+			case 'vacances_scolaires':
+				if (!in_array($domogeek->getConfiguration('zone_scolaire'), array('A','B','C'))) {
+					throw new Exception(__('La zone scolaire doit être A, B ou C', __FILE__));
+				}else{
+					$holidayall=json_decode(file_get_contents($url."/holidayall/".$domogeek->getConfiguration('zone_scolaire')."/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+				}
+				if($holidayall['schoolholiday']=="False"){
+					return "Non";
+				}else{
+					return $holidayall['schoolholiday'];
+				}
+				break;
+			case 'duree_jour':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return $sun['dayduration'];
+				break;
+			case 'sunset':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return $sun['sunset'];
+				break;
+			case 'zenith':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return $sun['zenith'];
+				break;
+			case 'sunrise':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return $sun['sunrise'];
+				break;
+			case 'sunset_raw':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return str_replace(':', '',$sun['sunset']);
+				break;
+			case 'zenith_raw':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return str_replace(':', '',$sun['zenith']);
+				break;
+			case 'sunrise_raw':
+				if ($domogeek->getConfiguration('ville')=="") {
+					throw new Exception(__('La ville ne peut-être vide', __FILE__));
+				}else{
+					$sun=json_decode(file_get_contents($url."/sun/".$domogeek->getConfiguration('ville')."/all/now",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				return str_replace(':', '',$sun['sunrise']);
+				break;
+			case 'ip_publique':
+				$ip_publique=json_decode(file_get_contents($url."/myip/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				return $ip_publique['myip'];
+				break;
+			case 'season':
+				$season=json_decode(file_get_contents($url."/season/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				if($season['season']=="winter"){
+					return "hiver";
+				}elseif($season['season']=="spring"){
+					return "printemps";
+				}elseif($season['season']=="summer"){
+					return "été";
+				}elseif($season['season']=="fall"){
+					return "automne";
+				}else{
+					return $season['season'];
+				}
+				break;
+			case 'feastedsaint':
+				$feastedsaint=json_decode(file_get_contents($url."/feastedsaint/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				return $feastedsaint['feastedsaint'];
+				break;
+			case 'feastedsaint_tomorrow':
+				$feastedsaint_tomorrow=json_decode(file_get_contents($url."/feastedsaint/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				return $feastedsaint_tomorrow['feastedsaint'];
+				break;
+			case 'ejp_today':
+				if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+					$ejp_today=array();
+					$ejp_today['ejp']="NON CONFIGURE";
+				}else{
+					$ejp_today=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/today/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				if($ejp_today['ejp']=="False"){
+					return "Non";
+				}elseif($ejp_today['ejp']=="True"){
+					return "Oui";
+				}else{
+					return $ejp_today['ejp'];
+				}
+				break;
+			case 'ejp_tomorrow':
+				if (!in_array($domogeek->getConfiguration('zone_ejp'), array('nord','sud','ouest','paca'))) {
+					$ejp_tomorrow=array();
+					$ejp_tomorrow['ejp']="NON CONFIGURE";
+				}else{
+					$ejp_tomorrow=json_decode(file_get_contents($url."/ejpedf/".$domogeek->getConfiguration('zone_ejp')."/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				}
+				if($ejp_tomorrow['ejp']=="False"){
+					return "Non";
+				}elseif($ejp_tomorrow['ejp']=="True"){
+					return "Oui";
+				}else{
+					return $ejp_tomorrow['ejp'];
+				}
+				break;
+			case 'tempo_today':
+				$tempo=json_decode(file_get_contents($url."/tempoedf/now/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				return $tempo['tempocolor'];
+				break;
+			case 'tempo_tomorrow':
+				$tempo_tomorrow=json_decode(file_get_contents($url."/tempoedf/tomorrow/json",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);
+				return $tempo_tomorrow['tempocolor'];
+				break;
+			case 'vigilance_inondation':
+				if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
+					throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
+				   }else{
+					$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+				}
+				return $vigilance['vigilanceflood'];
+				break;
+			case 'vigilance_meteo':
+				if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
+					throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
+				   }else{
+					$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+				}
+				return $vigilance['vigilancecolor'];
+				break;
+			case 'vigilance_type':
+				if (!is_numeric($domogeek->getConfiguration('departement')) || strlen($domogeek->getConfiguration('departement'))<>2) {
+					throw new Exception(__('Le département doit être 2 chiffres', __FILE__));
+				   }else{
+					$vigilance=json_decode(file_get_contents($url."/vigilance/".$domogeek->getConfiguration('departement')."/all",false,stream_context_create(array('http' => array('user_agent' => 'jeedom')))),true);	
+				}
+				return $vigilance['vigilancerisk'];
+				break;
+			default:
+				log::add('domogeek', 'warning', 'Commande inconnue : ' . $this->getLogicalId());
 		}
         return false;
     }

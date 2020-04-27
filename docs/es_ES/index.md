@@ -1,14 +1,14 @@
-DomoGeek 
+ 
 ========
 
-descripción 
+Descripción 
 -----------
 
-Complemento para recuperar información del sitio DomoGeek.
+Complemento para recuperar información del sitio .
 
 ![domogeek screenshot1](../images/domogeek_screenshot1.png)
 
-configuración 
+Configuración 
 -------------
 
 La configuración se realiza en el complemento Domogeek.
@@ -20,13 +20,13 @@ Preguntas frecuentes
 
 El sistema recupera información cada 2 horas..
 
-cambios 
+Cambios 
 ---------
 
--   V1.2 : Temporada de adición, santo del día y santo del día siguiente
+-    : Temporada de adición, santo del día y santo del día siguiente
 
--   V1.1 : Agregar WCY y dirección IP
+-    : Agregar WCY y dirección IP
 
--   V1 : Primer lanzamiento
+-    : Primer lanzamiento
 
 

@@ -1,11 +1,5 @@
 {
-    "desktop\/js\/domogeek.js": {
-        "Nom": "Nom",
-        "Historiser": "Historiser",
-        "Affichage": "Affichage",
-        "Tester": "Tester"
-    },
-    "desktop\/php\/domogeek.php": {
+    "plugins\/domogeek\/desktop\/php\/domogeek.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Gestion": "Gestion",
         "Ajouter": "Ajouter",
@@ -36,11 +30,17 @@
         "Type": "Type",
         "Action": "Action"
     },
-    "core\/ajax\/domogeek.ajax.php": {
+    "plugins\/domogeek\/desktop\/js\/domogeek.js": {
+        "Nom": "Nom",
+        "Historiser": "Historiser",
+        "Affichage": "Affichage",
+        "Tester": "Tester"
+    },
+    "plugins\/domogeek\/core\/ajax\/domogeek.ajax.php": {
         "401 - Accès non autorisé": "401 - Accès non autorisé",
         "Aucune methode correspondante à : ": "Aucune methode correspondante à : "
     },
-    "core\/class\/domogeek.class.php": {
+    "plugins\/domogeek\/core\/class\/domogeek.class.php": {
         "Rafraichir": "Rafraichir",
         "Férié": "Férié",
         "Week-End": "Week-End",
@@ -63,8 +63,8 @@
         "Vigilance inondation": "Vigilance inondation",
         "Vigilance météo": "Vigilance météo",
         "Type de vigilance": "Type de vigilance",
-        "La zone scolaire doit être A": "La zone scolaire doit être A",
-        "La zone EJP doit être nord": "La zone EJP doit être nord",
+        "La zone scolaire doit être A, B ou C": "La zone scolaire doit être A, B ou C",
+        "La zone EJP doit être nord, sud, ouest ou paca": "La zone EJP doit être nord, sud, ouest ou paca",
         "Le département doit être 2 chiffres": "Le département doit être 2 chiffres",
         "La ville ne peut-être vide": "La ville ne peut-être vide"
     }

@@ -1,10 +1,10 @@
- 
+DomoGeek 
 ========
 
 Beschreibung 
 -----------
 
-Plugin zum Abrufen von Informationen von der -Site.
+Plugin zum Abrufen von Informationen von der DomoGeek-Site.
 
 ![domogeek screenshot1](../images/domogeek_screenshot1.png)
 
@@ -23,10 +23,10 @@ Das System ruft alle 2 Stunden Informationen ab.
 Änderungsprotokoll 
 ---------
 
--    : Zusatzsaison, Heiliger des Tages und Heiliger des folgenden Tages
+-   V1.2 : Zusatzsaison, Heiliger des Tages und Heiliger des folgenden Tages
 
--    : Hinzufügen von WCY und IP-Adresse
+-   V1.1 : Hinzufügen von WCY und IP-Adresse
 
--    : Erste Veröffentlichung
+-   V1 : Erste Veröffentlichung
 
 

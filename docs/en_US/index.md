@@ -11,7 +11,7 @@ Plugin to retrieve information from the DomoGeek site.
 Setup 
 -------------
 
-Setup is done in the Domogeek plugin.
+Configuration is done in the Domogeek plugin.
 
 ![domogeek1](../images/domogeek1.png)
 

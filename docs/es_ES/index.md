@@ -18,7 +18,7 @@ La configuración se realiza en el complemento Domogeek.
 Preguntas frecuentes 
 ---
 
-El sistema recupera información cada 2 horas..
+El sistema recupera información cada 2 horas.
 
 Cambios 
 ---------

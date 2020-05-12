@@ -1,5 +1,6 @@
 {
     "changelog.md": {
+        "Changelog DomoGeek": "Registro de cambios DomoGeek",
         "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto",
         "31\/05\/2018": "05\/31\/2018",
         "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modificación del sistema de sincronización con Domogeek para suavizar las solicitudes",

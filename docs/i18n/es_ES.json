@@ -1,22 +1,35 @@
 {
     "changelog.md": {
+        "Changelog DomoGeek": "Registro de cambios DomoGeek",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto",
         "31\/05\/2018": "05\/31\/2018",
-        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modificación del sistema de sincronización con Domogeek para suavizar las solicitudes."
+        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modificación del sistema de sincronización con Domogeek para suavizar las solicitudes",
+        " IMPORTANT.": " Importante.",
+        " IMPORTANT?": " Importante?",
+        "IMPORTANT ": "Importante ",
+        "[IMPORTANT": "[Importante",
+        "IMPORTANT]": "Importante]",
+        "*IMPORTANT": "*Importante",
+        "IMPORTANT*": "Importante*"
     },
     "index.md": {
-        "DomoGeek": "DomoGeek",
-        "Description": "descripción",
+        "Plugin DomoGeek": "Complemento DomoGeek",
         "Plugin pour récuperer les informations du site DomoGeek": "Complemento para recuperar información del sitio DomoGeek",
-        "Configuration": "configuración",
         "La configuration se fait dans le plugin Domogeek": "La configuración se realiza en el complemento Domogeek",
-        "FAQ": "Preguntas frecuentes",
-        "Le système récupère les informations toutes les 2 heures": "El sistema recupera información cada 2 horas.",
-        "Changelog": "cambios",
-        "V1.2": "V1.2",
-        "Ajout Saison, saint du jour et saint du lendemain": "Temporada de adición, santo del día y santo del día siguiente",
-        "V1.1": "V1.1",
-        "Ajout EJT et Adresse IP": "Agregar WCY y dirección IP",
-        "V1": "V1",
-        "Première release": "Primer lanzamiento"
+        "Le système récupère les informations toutes les 2 heures": "El sistema recupera información cada 2 horas",
+        " Configuration.": " Configuración.",
+        " Configuration?": " Configuración?",
+        "Configuration ": "Configuración ",
+        "[Configuration": "[Configuración",
+        "Configuration]": "Configuración]",
+        "*Configuration": "*Configuración",
+        "Configuration*": "Configuración*",
+        " FAQ.": " Preguntas frecuentes.",
+        " FAQ?": " Preguntas frecuentes?",
+        "FAQ ": "Preguntas frecuentes ",
+        "[FAQ": "[Preguntas frecuentes",
+        "FAQ]": "Preguntas frecuentes]",
+        "*FAQ": "*Preguntas frecuentes",
+        "FAQ*": "Preguntas frecuentes*"
     }
 }

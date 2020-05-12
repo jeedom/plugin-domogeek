@@ -1,0 +1,35 @@
+{
+    "changelog.md": {
+        "Changelog DomoGeek": "Changelog DomoGeek",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto",
+        "31\/05\/2018": "31\/05\/2018",
+        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modificação do sistema de sincronização com Domogeek para suavizar solicitações",
+        " IMPORTANT.": " IMPORTANTE.",
+        " IMPORTANT?": " IMPORTANTE?",
+        "IMPORTANT ": "IMPORTANTE ",
+        "[IMPORTANT": "[IMPORTANTE",
+        "IMPORTANT]": "IMPORTANTE]",
+        "*IMPORTANT": "*IMPORTANTE",
+        "IMPORTANT*": "IMPORTANTE*"
+    },
+    "index.md": {
+        "Plugin DomoGeek": "DomoGeek plugin",
+        "Plugin pour récuperer les informations du site DomoGeek": "Plugin para recuperar informações do site DomoGeek",
+        "La configuration se fait dans le plugin Domogeek": "A configuração é feita no plug-in Domogeek",
+        "Le système récupère les informations toutes les 2 heures": "O sistema recupera informações a cada 2 horas",
+        " Configuration.": " Configuração.",
+        " Configuration?": " Configuração?",
+        "Configuration ": "Configuração ",
+        "[Configuration": "[Configuração",
+        "Configuration]": "Configuração]",
+        "*Configuration": "*Configuração",
+        "Configuration*": "Configuração*",
+        " FAQ.": " Faq.",
+        " FAQ?": " Faq?",
+        "FAQ ": "Faq ",
+        "[FAQ": "[Faq",
+        "FAQ]": "Faq]",
+        "*FAQ": "*Faq",
+        "FAQ*": "Faq*"
+    }
+}

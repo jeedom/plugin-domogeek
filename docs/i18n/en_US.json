@@ -1,22 +1,35 @@
 {
     "changelog.md": {
+        "Changelog DomoGeek": "Changelog DomoGeek",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text",
         "31\/05\/2018": "05\/31\/2018",
-        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modification of the synchronization system with Domogeek to smooth requests"
+        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Modification of the synchronization system with Domogeek to smooth requests",
+        " IMPORTANT.": " Important.",
+        " IMPORTANT?": " Important?",
+        "IMPORTANT ": "Important ",
+        "[IMPORTANT": "[Important",
+        "IMPORTANT]": "Important]",
+        "*IMPORTANT": "*Important",
+        "IMPORTANT*": "Important*"
     },
     "index.md": {
-        "DomoGeek": "DomoGeek",
-        "Description": "Description",
+        "Plugin DomoGeek": "DomoGeek plugin",
         "Plugin pour récuperer les informations du site DomoGeek": "Plugin to retrieve information from the DomoGeek site",
-        "Configuration": "Configuration",
         "La configuration se fait dans le plugin Domogeek": "Configuration is done in the Domogeek plugin",
-        "FAQ": "FAQ",
         "Le système récupère les informations toutes les 2 heures": "The system retrieves information every 2 hours",
-        "Changelog": "Changelog",
-        "V1.2": "V1.2",
-        "Ajout Saison, saint du jour et saint du lendemain": "Addition Season, Saint of the day and Saint of the following day",
-        "V1.1": "V1.1",
-        "Ajout EJT et Adresse IP": "Adding WCY and IP Address",
-        "V1": "V1",
-        "Première release": "First release"
+        " Configuration.": " Setup.",
+        " Configuration?": " Setup?",
+        "Configuration ": "Setup ",
+        "[Configuration": "[Setup",
+        "Configuration]": "Setup]",
+        "*Configuration": "*Setup",
+        "Configuration*": "Setup*",
+        " FAQ.": " FAQ.",
+        " FAQ?": " FAQ?",
+        "FAQ ": "FAQ ",
+        "[FAQ": "[FAQ",
+        "FAQ]": "FAQ]",
+        "*FAQ": "*FAQ",
+        "FAQ*": "FAQ*"
     }
 }

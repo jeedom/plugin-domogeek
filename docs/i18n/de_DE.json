@@ -1,22 +1,35 @@
 {
     "changelog.md": {
+        "Changelog DomoGeek": "Changelog DomoGeek",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
         "31\/05\/2018": "2018.05.31",
-        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Änderung des Synchronisationssystems mit Domogeek zur Glättung von Anfragen"
+        "Modification du systeme de synchronisation avec Domogeek pour lisser les demandes": "Änderung des Synchronisationssystems mit Domogeek zur Glättung von Anfragen",
+        " IMPORTANT.": " Wichtig.",
+        " IMPORTANT?": " Wichtig?",
+        "IMPORTANT ": "Wichtig ",
+        "[IMPORTANT": "[Wichtig",
+        "IMPORTANT]": "Wichtig]",
+        "*IMPORTANT": "*Wichtig",
+        "IMPORTANT*": "Wichtig*"
     },
     "index.md": {
-        "DomoGeek": "DomoGeek",
-        "Description": "Beschreibung",
+        "Plugin DomoGeek": "DomoGeek Plugin",
         "Plugin pour récuperer les informations du site DomoGeek": "Plugin zum Abrufen von Informationen von der DomoGeek-Site",
-        "Configuration": "Konfiguration",
         "La configuration se fait dans le plugin Domogeek": "Die Konfiguration erfolgt im Domogeek-Plugin",
-        "FAQ": "FAQ",
         "Le système récupère les informations toutes les 2 heures": "Das System ruft alle 2 Stunden Informationen ab",
-        "Changelog": "Changelog",
-        "V1.2": "V1.2",
-        "Ajout Saison, saint du jour et saint du lendemain": "Zusatzsaison, Heiliger des Tages und Heiliger des folgenden Tages",
-        "V1.1": "V1.1",
-        "Ajout EJT et Adresse IP": "Hinzufügen von WCY und IP-Adresse",
-        "V1": "V1",
-        "Première release": "Erste Veröffentlichung"
+        " Configuration.": " Konfiguration.",
+        " Configuration?": " Konfiguration?",
+        "Configuration ": "Konfiguration ",
+        "[Configuration": "[Konfiguration",
+        "Configuration]": "Konfiguration]",
+        "*Configuration": "*Konfiguration",
+        "Configuration*": "Konfiguration*",
+        " FAQ.": " Faq.",
+        " FAQ?": " Faq?",
+        "FAQ ": "Faq ",
+        "[FAQ": "[Faq",
+        "FAQ]": "Faq]",
+        "*FAQ": "*Faq",
+        "FAQ*": "Faq*"
     }
 }

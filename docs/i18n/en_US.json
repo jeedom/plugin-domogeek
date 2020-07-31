@@ -7,10 +7,10 @@
         " IMPORTANT.": " Important.",
         " IMPORTANT?": " Important?",
         "IMPORTANT ": "Important ",
-        "[IMPORTANT": "[Important",
-        "IMPORTANT]": "Important]",
-        "*IMPORTANT": "*Important",
-        "IMPORTANT*": "Important*"
+        " IMPORTANT]": " Important]",
+        "[IMPORTANT]": "[Important]",
+        "*IMPORTANT*": "*Important*",
+        " IMPORTANT*": " Important*"
     },
     "index.md": {
         "Plugin DomoGeek": "DomoGeek plugin",
@@ -20,16 +20,16 @@
         " Configuration.": " Setup.",
         " Configuration?": " Setup?",
         "Configuration ": "Setup ",
-        "[Configuration": "[Setup",
-        "Configuration]": "Setup]",
-        "*Configuration": "*Setup",
-        "Configuration*": "Setup*",
+        " Configuration]": " Setup]",
+        "[Configuration]": "[Setup]",
+        "*Configuration*": "*Setup*",
+        " Configuration*": " Setup*",
         " FAQ.": " FAQ.",
         " FAQ?": " FAQ?",
         "FAQ ": "FAQ ",
-        "[FAQ": "[FAQ",
-        "FAQ]": "FAQ]",
-        "*FAQ": "*FAQ",
-        "FAQ*": "FAQ*"
+        " FAQ]": " FAQ]",
+        "[FAQ]": "[FAQ]",
+        "*FAQ*": "*FAQ*",
+        " FAQ*": " FAQ*"
     }
 }

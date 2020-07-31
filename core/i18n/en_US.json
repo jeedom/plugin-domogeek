@@ -67,5 +67,8 @@
         "La zone EJP doit être nord, sud, ouest ou paca": "EJP Zone must be nord, sud, ouest, paca",
         "Le département doit être 2 chiffres": "Department must be two digits long",
         "La ville ne peut-être vide": "City can't be empty"
+    },
+    "info.json": {
+        "Plugin pour récuperer les informations du site DomoGeek. Le plugin permet de récupérer de nombreuses infos : <br>- Jour férié <br>- Week-End <br>- Vacances scolaires <br>- Durée du jour (soleil) <br>- Heure de levé du soleil <br>- Heure du zenith - Heure du couché du soleil <br>- Couleur EDF Tempo <br>- Couleur EDF Tempo de demain - Vigilance Météo France Inondation <br>- Vigilance Météo France Météo <br>- Vigilance Météo France Type de perturbation <br>- EDF EJT <br>- Adresse IP <br>- Saison <br>- Saint du jour <br>- Saint du lendemain": "Plugin to retrieve information from the DomoGeek site. The plugin allows you to retrieve a lot of information: <br> - Public holiday <br> - Weekend <br> - School vacation <br> - Day length (sun) <br> - Sunrise time <br> - Zenith time - Sunset time <br> - EDF Tempo color <br> - EDF Tempo color of tomorrow - Vigilance Météo France Inondation <br> - Vigilance Météo France Météo <br> - Vigilance Météo France Type of disturbance <br> - EDF WCY <br> - IP adress <br> - season <br> - Saint of the day <br> - Saint of the next day"
     }
 }

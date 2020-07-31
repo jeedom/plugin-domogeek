@@ -47,7 +47,7 @@
         "Vacances scolaires": "Férias escolares",
         "Durée jour": "Dia de duração",
         "Lever du soleil": "Nascer do sol",
-        "Zenith": "Zenith",
+        "Zenith": "Zênite",
         "Coucher du soleil": "Pôr do sol",
         "Lever du soleil scénario": "Cenário do nascer do sol",
         "Zenith scénario": "Cenário Zenith",
@@ -67,5 +67,8 @@
         "La zone EJP doit être nord, sud, ouest ou paca": "A zona EJP deve ser norte, sul, oeste ou paca",
         "Le département doit être 2 chiffres": "O departamento deve ter 2 dígitos",
         "La ville ne peut-être vide": "A cidade pode não estar vazia"
+    },
+    "info.json": {
+        "Plugin pour récuperer les informations du site DomoGeek. Le plugin permet de récupérer de nombreuses infos : <br>- Jour férié <br>- Week-End <br>- Vacances scolaires <br>- Durée du jour (soleil) <br>- Heure de levé du soleil <br>- Heure du zenith - Heure du couché du soleil <br>- Couleur EDF Tempo <br>- Couleur EDF Tempo de demain - Vigilance Météo France Inondation <br>- Vigilance Météo France Météo <br>- Vigilance Météo France Type de perturbation <br>- EDF EJT <br>- Adresse IP <br>- Saison <br>- Saint du jour <br>- Saint du lendemain": "Plug-in para recuperar informações do site DomoGeek. O plug-in permite recuperar muitas informações: <br> - Feriado <br> - Final de semana <br> - Férias escolares <br> - Duração do dia (sol) <br> - Hora do nascer do sol <br> - Hora Zenith - Hora do pôr do sol <br> - Cor EDF Tempo <br> - EDF Tempo cor de amanhã - Vigilance Météo France Inondation <br> - Vigilância Météo França Météo <br> - Vigilância Météo França Tipo de perturbação <br> - EDF CJT <br> - Endereço de IP <br> - estação <br> - Santo do dia <br> - Santo do dia seguinte"
     }
 }

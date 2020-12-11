@@ -94,7 +94,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">{{Département}}</label>
+                        <label class="col-sm-3 control-label">{{N° département}}</label>
                         <div class="col-sm-3">
                             <input type="text" id="departement" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="departement" placeholder="Département"/>
                         </div>

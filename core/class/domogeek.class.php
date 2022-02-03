@@ -490,11 +490,11 @@ class domogeek extends eqLogic {
 						$cmd->event("printemps");
 					}elseif($season['season']=="summer"){
 						$cmd->event("été");
-					}elseif($season['season']=="fall"){
+					}elseif($season['season']=="fall" || $season['season']=="autumn"){
 						$cmd->event("automne");
 					}else{
 						$cmd->event($season['season']);
-					}					
+					}
 				}elseif($cmd->getConfiguration('data')=="ip_publique"){
 					$cmd->event($ip_publique['myip']);
 				}elseif($cmd->getConfiguration('data')=="feastedsaint"){
@@ -644,7 +644,7 @@ class domogeekCmd extends cmd {
 					return "printemps";
 				}elseif($season['season']=="summer"){
 					return "été";
-				}elseif($season['season']=="fall"){
+				}elseif($season['season']=="fall" || $season['season']=="autumn"){
 					return "automne";
 				}else{
 					return $season['season'];

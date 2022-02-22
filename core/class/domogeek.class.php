@@ -53,7 +53,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ferie');
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('ferie');
@@ -65,7 +64,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'weekend');
         $domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('weekend');
@@ -77,7 +75,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vacances_scolaires');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('vacances_scolaires');
@@ -89,7 +86,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'duree_jour');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(1);
 		$domogeekCmd->setLogicalId('duree_jour');
@@ -101,7 +97,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunrise');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('sunrise');
@@ -113,7 +108,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'zenith');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('zenith');
@@ -125,7 +119,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunset');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('sunset');
@@ -137,7 +130,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunrise_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -150,7 +142,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'zenith_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -163,7 +154,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'sunset_raw');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setIsVisible(0);
@@ -176,7 +166,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ip_publique');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('ip_publique');
@@ -188,7 +177,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'tempo_today');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('tempo_today');
@@ -200,7 +188,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'tempo_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('tempo_tomorrow');
@@ -212,7 +199,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ejp_today');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('ejp_today');
@@ -224,7 +210,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('ejp_tomorrow');
@@ -236,7 +221,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'season');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('season');
@@ -248,7 +232,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'feastedsaint');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('feastedsaint');
@@ -260,7 +243,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('feastedsaint_tomorrow');
@@ -272,7 +254,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_inondation');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('vigilance_inondation');
@@ -284,7 +265,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_meteo');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('vigilance_meteo');
@@ -296,7 +276,6 @@ class domogeek extends eqLogic {
         $domogeekCmd->setConfiguration('data', 'vigilance_type');
 		$domogeekCmd->setUnite('');
         $domogeekCmd->setType('info');
-		$domogeekCmd->setEventOnly(1);
         $domogeekCmd->setSubType('string');
 		$domogeekCmd->setIsHistorized(0);
 		$domogeekCmd->setLogicalId('vigilance_type');
@@ -316,7 +295,6 @@ class domogeek extends eqLogic {
 		$found_saison=0;
 		$found_saint=0;
 		foreach ($this->getCmd() as $cmd) {
-			$cmd->setEventOnly(1);
 			$cmd->save();
 			if($cmd->getConfiguration('data')=="ejp_today"){
 				$found_ejp=1;
@@ -335,7 +313,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ejp_today');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 			$domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('ejp_today');
@@ -347,7 +324,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ejp_tomorrow');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('ejp_tomorrow');
@@ -360,7 +336,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'ip_publique');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('ip_publique');
@@ -373,7 +348,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'season');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('season');
@@ -386,7 +360,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'feastedsaint');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('feastedsaint');
@@ -398,7 +371,6 @@ class domogeek extends eqLogic {
 	        $domogeekCmd->setConfiguration('data', 'feastedsaint_tomorrow');
 			$domogeekCmd->setUnite('');
 	        $domogeekCmd->setType('info');
-			$domogeekCmd->setEventOnly(1);
 	        $domogeekCmd->setSubType('string');
 			$domogeekCmd->setIsHistorized(0);
 			$domogeekCmd->setLogicalId('feastedsaint_tomorrow');
@@ -518,11 +490,11 @@ class domogeek extends eqLogic {
 						$cmd->event("printemps");
 					}elseif($season['season']=="summer"){
 						$cmd->event("été");
-					}elseif($season['season']=="fall"){
+					}elseif($season['season']=="fall" || $season['season']=="autumn"){
 						$cmd->event("automne");
 					}else{
 						$cmd->event($season['season']);
-					}					
+					}
 				}elseif($cmd->getConfiguration('data')=="ip_publique"){
 					$cmd->event($ip_publique['myip']);
 				}elseif($cmd->getConfiguration('data')=="feastedsaint"){
@@ -672,7 +644,7 @@ class domogeekCmd extends cmd {
 					return "printemps";
 				}elseif($season['season']=="summer"){
 					return "été";
-				}elseif($season['season']=="fall"){
+				}elseif($season['season']=="fall" || $season['season']=="autumn"){
 					return "automne";
 				}else{
 					return $season['season'];

@@ -19,7 +19,7 @@
         "Catégorie": "Catégorie",
         "Activer": "Activer",
         "Visible": "Visible",
-        "Département": "Département",
+        "N° département": "N° département",
         "Ville": "Ville",
         "Zone scolaire": "Zone scolaire",
         "Choisir une zone scolaire": "Choisir une zone scolaire",
@@ -67,5 +67,8 @@
         "La zone EJP doit être nord, sud, ouest ou paca": "La zone EJP doit être nord, sud, ouest ou paca",
         "Le département doit être 2 chiffres": "Le département doit être 2 chiffres",
         "La ville ne peut-être vide": "La ville ne peut-être vide"
+    },
+    "info.json": {
+        "Plugin pour récuperer les informations du site DomoGeek. Le plugin permet de récupérer de nombreuses infos : <br>- Jour férié <br>- Week-End <br>- Vacances scolaires <br>- Durée du jour (soleil) <br>- Heure de levé du soleil <br>- Heure du zenith - Heure du couché du soleil <br>- Couleur EDF Tempo <br>- Couleur EDF Tempo de demain - Vigilance Météo France Inondation <br>- Vigilance Météo France Météo <br>- Vigilance Météo France Type de perturbation <br>- EDF EJT <br>- Adresse IP <br>- Saison <br>- Saint du jour <br>- Saint du lendemain": "Plugin pour récuperer les informations du site DomoGeek. Le plugin permet de récupérer de nombreuses infos : <br>- Jour férié <br>- Week-End <br>- Vacances scolaires <br>- Durée du jour (soleil) <br>- Heure de levé du soleil <br>- Heure du zenith - Heure du couché du soleil <br>- Couleur EDF Tempo <br>- Couleur EDF Tempo de demain - Vigilance Météo France Inondation <br>- Vigilance Météo France Météo <br>- Vigilance Météo France Type de perturbation <br>- EDF EJT <br>- Adresse IP <br>- Saison <br>- Saint du jour <br>- Saint du lendemain"
     }
 }

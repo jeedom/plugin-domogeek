@@ -19,7 +19,7 @@
         "Catégorie": "Kategorie",
         "Activer": "Aktivieren",
         "Visible": "Sichtbar",
-        "Département": "Abteilung",
+        "N° département": "Abteilungsnummer",
         "Ville": "Stadt",
         "Zone scolaire": "Schulbereich",
         "Choisir une zone scolaire": "Wählen Sie eine Schulzone",
@@ -47,7 +47,7 @@
         "Vacances scolaires": "Schulferien",
         "Durée jour": "Dauer Tag",
         "Lever du soleil": "Sonnenaufgang",
-        "Zenith": "Zenith",
+        "Zenith": "Zenit",
         "Coucher du soleil": "Sonnenuntergang",
         "Lever du soleil scénario": "Sonnenaufgangsszenario",
         "Zenith scénario": "Zenith-Szenario",
@@ -67,5 +67,8 @@
         "La zone EJP doit être nord, sud, ouest ou paca": "Die EJP-Zone muss Nord, Süd, West oder Paca sein",
         "Le département doit être 2 chiffres": "Abteilung muss 2-stellig sein",
         "La ville ne peut-être vide": "Die Stadt darf nicht leer sein"
+    },
+    "info.json": {
+        "Plugin pour récuperer les informations du site DomoGeek. Le plugin permet de récupérer de nombreuses infos : <br>- Jour férié <br>- Week-End <br>- Vacances scolaires <br>- Durée du jour (soleil) <br>- Heure de levé du soleil <br>- Heure du zenith - Heure du couché du soleil <br>- Couleur EDF Tempo <br>- Couleur EDF Tempo de demain - Vigilance Météo France Inondation <br>- Vigilance Météo France Météo <br>- Vigilance Météo France Type de perturbation <br>- EDF EJT <br>- Adresse IP <br>- Saison <br>- Saint du jour <br>- Saint du lendemain": "Plugin zum Abrufen von Informationen von der DomoGeek-Site. Mit dem Plugin können Sie viele Informationen abrufen: <br> - Gesetzlicher Feiertag <br> - Wochenende <br> - Schulferien <br> - Tageslänge (Sonne) <br> - Sonnenaufgangszeit <br> - Zenitzeit - Sonnenuntergangszeit <br> - EDF Tempo Farbe <br> - EDF Tempo Farbe von morgen - Vigilance Météo France Inondation <br> - Wachsamkeit Météo France Météo <br> - Vigilance Météo France Art der Störung <br> - EDF WCY <br> - IP Adresse <br> - Jahreszeit <br> - Heiliger des Tages <br> - Heiliger des nächsten Tages"
     }
 }
